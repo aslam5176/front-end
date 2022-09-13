@@ -1,0 +1,36 @@
+%Container8 {
+    .container8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+
+        .guna1 {
+            height: 250px;
+            width: 400px;
+            background-color: rgb(243, 11, 11);
+            color: white;
+
+            >i {
+                margin-left: 50px;
+                margin-top: 20px;
+                color: white;
+            }
+
+            >h4 {
+
+                margin-left: 50px;
+            }
+
+            >p {
+                margin-left: 50px;
+                color: rgb(199, 181, 181);
+            }
+
+
+        }
+
+
+    }
+}

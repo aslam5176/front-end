@@ -1,0 +1,79 @@
+%Container5 {
+  .Container5 {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .video {
+      max-width: 1800px;
+
+      >img {
+        position: absolute;
+
+
+      }
+
+      >a {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        margin-left: 43%;
+        margin-top: 23%;
+        border-radius: 50%;
+        border: 3Px solid white;
+
+        &:hover {
+          background-color: white;
+        }
+
+        >i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 18px;
+          color: white;
+
+          &:hover {
+            color: red;
+          }
+
+        }
+
+
+      }
+
+      .insidebox {
+        height: 150px;
+        width: 420px;
+        background-color: rgb(235, 10, 10);
+        position: absolute;
+        // bottom: 11.6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0%;
+
+        >h4 {
+
+
+          color: white;
+
+
+          margin-right: 200px;
+
+
+
+
+
+
+        }
+
+        >i {
+          color: white;
+        }
+      }
+
+
+    }
+  }
+}

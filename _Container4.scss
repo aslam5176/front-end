@@ -1,0 +1,157 @@
+%Container4 {
+    .Container4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        background-color: rgb(255, 255, 255);
+        // overflow: hidden;
+        height: 1700px;
+
+
+        // margin: auto;
+        >.wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 1800px;
+
+            >.title h2 {
+                display: flex;
+                justify-content: center;
+                font-size: 50px;
+                margin: 100px 0px;
+            }
+
+            >.title p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                text-align: center;
+                color: black;
+                padding: 0px 0px;
+                margin-top: -8%;
+            }
+
+            .grid {
+                // display: flex;
+                // flex-direction: row;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+
+                >.card {
+                    // height: 550px;
+                    // width: 361px;
+                    // background-color: rgb(67, 0, 250);
+                    display: block;
+                    text-align: center;
+                    margin-top: 0%;
+                    font-size: 20px;
+                    color: rgb(80, 78, 78) ;
+                    position: relative;
+                    overflow: hidden; 
+                    .ganesh{
+                        position: relative;
+                        overflow: hidden;
+                        &:hover .hover{
+                            bottom: 0%;
+                               
+                        }
+                        // >img{
+                        //     // position: absolute;
+                        // }
+                        >.hover{
+                            position: absolute;
+                            height: 60px;
+                            width: 100%;
+                            background-color: rgb(238, 0, 0);
+                            bottom: -15.5% ;
+                            transition: all 1s;  
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;    
+                            font-size: 15px;
+                            font-weight: 700;                   
+                            
+                        }
+                        
+                    }
+                   
+
+                }
+
+            }
+
+        }
+    }
+    .sathish{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        font-size: 20px;
+        color: rgb(80, 78, 78);
+        >.card1{
+            .ganesh{
+                position: relative;
+                overflow: hidden;
+                font-weight: 700;
+                
+                &:hover .hover{
+                    bottom: 0%;
+                    
+                       
+                }
+               
+                >.hover{
+                    position: absolute;
+                    height: 60px;
+                    width: 100%;
+                    background-color: rgb(238, 0, 0);
+                    bottom: -15.5% ;
+                    transition: all 1s;  
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;                       
+                    font-size: 16px;
+                    font-weight: 600;                   
+                            
+                }
+                
+            }
+           
+
+
+        }
+        
+     
+   
+}
+  .btn{
+    height: 60px;
+    width: 250px;
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    color:white;
+    font-weight: 700px;
+    margin: 100px;
+    &:hover{
+        background-color: rgb(56, 55, 55);
+    }
+}
+
+}
+.vignesh{
+    position: absolute;
+    
+}
+
