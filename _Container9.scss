@@ -1,20 +1,41 @@
+@import "./mixins";
+
 %Container9 {
     .Container9 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         height: 50%;
+        height: auto;
         margin: 100PX;
         background-color: rgb(255, 255, 255);
         align-items: center;
+        justify-content: center;
 
+        @include breakpoint(996px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include breakpoint(843px) {
+            // width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(554px) {
+            // width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         footer {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+
             gap: 50px;
         }
 
-        h4 {
-            font-weight: bolder;
-            font-size: 20px;
+         h4 {
+            font-weight:600;
+            font-size: 22px;
         }
 
         a {
@@ -36,6 +57,7 @@
             margin-top: 30px;
             line-height: 30px;
             gap: 40px;
+            width: 300px;
         }
 
         img {
@@ -44,12 +66,10 @@
 
 
     }
-
 }
 
 .footer1 {
     display: flex;
-
     align-items: center;
     justify-content: space-around;
 
@@ -63,6 +83,7 @@
 
         >span {
             color: red;
+            cursor: pointer;
         }
 
     }
@@ -76,6 +97,11 @@
 
         &:hover {
             color: red;
+            rotate: 180deg;
+            transform: translate(5px, 0px,0px,0px);
+            transition: all 0.5s;
+            cursor: pointer;
+
 
         }
 

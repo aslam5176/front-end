@@ -1,3 +1,4 @@
+@import "./mixins";
 %Navbar {
   .navbar {
     display: flex;
@@ -11,7 +12,8 @@
     padding: 0px 20px;
     box-sizing: border-box;
     font-weight: bolder;
-    position: fixed;
+    position: sticky;
+    top: 0%;
     z-index: 99;
 
 
@@ -41,8 +43,11 @@
       align-items: center;
       gap: 50px;
       margin: auto;
-      font-weight: 600;
+      font-weight: 500;
       position: relative;
+      @include breakpoint(950px){
+        display: none;
+      }
       
     & a:hover {
       color: red;

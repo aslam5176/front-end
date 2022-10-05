@@ -1,16 +1,23 @@
+@import "./mixins";
 %Container5 {
   .Container5 {
-    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 
     .video {
       max-width: 1800px;
+      height: 100%;
+      width: 100%;
 
       >img {
         position: absolute;
-
-
+        width: auto;
+      
       }
 
       >a {
@@ -52,6 +59,12 @@
         align-items: center;
         justify-content: center;
         bottom: 0%;
+        @include breakpoint(1115px){                 
+          height: 70px;
+          width: 410px; 
+                           
+         }
+
 
         >h4 {
 

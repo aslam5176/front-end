@@ -1,3 +1,4 @@
+@import "./mixins";
 %Container8 {
     .container8 {
         display: flex;
@@ -5,6 +6,9 @@
         align-items: center;
         justify-content: center;
         height: 180px;
+        height: auto;
+        flex-wrap: wrap;
+        
 
         .guna1 {
             height: 250px;
@@ -21,6 +25,7 @@
             >h4 {
 
                 margin-left: 50px;
+              
             }
 
             >p {

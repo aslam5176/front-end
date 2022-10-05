@@ -1,48 +1,92 @@
+@import "./mixins";
 %Container6 {
     .Container6 {
         display: grid;
-        grid-template-columns: 47% 53%;
-        grid-template-rows: 100vh;
+        grid-template-columns: 45% 55%;
+        // grid-template-rows: auto;
         padding: 0px 20px;
         box-sizing: border-box;
         background-color: rgb(255, 255, 255);
         overflow: hidden;
         height: 100vh;
+        height: auto;
+        >.images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >img{
+                
+                @include breakpoint(1000px){                 
+                    width: 400px;                      
+                   }
+            }
+        }
+        @include breakpoint(1000px){   
+            grid-template-columns: 1fr;    
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+                   
+          }
 
 
         article {
+            display: flex;
+            flex-direction: column;
             margin: auto;
-
-
+            flex-wrap: wrap;
+            // @include breakpoint(1000px){   
+            //     grid-template-columns: 1fr;    
+            //   }
             >.title {
+                flex-direction: column;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 50px;
+                font-size: 40px;
                 font-style: initial;
                 color: rgb(11, 28, 57);
                 font-weight: bolder;
                 box-sizing: border-box;
-                margin-left: -20px;
-                margin-top: 30%;
+                // margin-left: auto;
+                // margin-top: 30%;
+                @include breakpoint(900px){
+                    font-size: 30px;
+                }
+                @include breakpoint(654px){      
+                    display: flex;
+                    // justify-content: flex-start;
+                    align-items: flex-start;           
+                    // margin-left: 0%;                     
+                   }
+    
             }
 
             >.subtitle {
+                flex-direction: column;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 line-height: 35px;
-                font-size: 18px;
+                font-size: 15px;
                 font-weight: 500;
                 margin-left: 100px;
-                margin-top: 5%;
+                margin-top:auto;
                 color: #535252;
-
-
+                @include breakpoint(1000px){    
+                    width: 500px;                   
+                           
+                  }
+                  @include breakpoint(654px){                 
+                    margin-left: 0%;                     
+                   }
+    
             }
 
             >.btn {
                 height: 60px;
+                // height: 500px;
                 width: 200px;
                 background-color: #ff0b0b;
                 color: #fdfbfb;
@@ -52,7 +96,11 @@
                 text-align: center;
                 font-weight: bold;
                 margin: 100px;
-                margin-top: 50px;
+                margin-top:auto;
+                @include breakpoint(654px){                 
+                    margin-left: 0%;                     
+                   }
+    
 
                 &:hover {
                     background-color: #535252;

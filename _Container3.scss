@@ -1,11 +1,24 @@
+@import "./mixins";
 %Container3 {
     >.container3 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 250px);
         gap: 20px;
-        height: 80%;
-        margin-top: 150px;
+        height: auto;
+        // margin-top: 150px;
+        @include breakpoint(992px){
+            grid-template-columns: repeat(2, 1fr);    
+            // grid-column: 1/1;
+              
+          }
+          @include breakpoint(552px){
+            grid-template-columns: repeat(1, 1fr); 
+            grid-template-rows: repeat(4, 250px);  
+            
+                
+          }
+
 
         .box {
             background-color: black;
@@ -24,20 +37,41 @@
             grid-row-end: 3;
             background-image: url(https://preview.colorlib.com/theme/timezone/assets/img/gallery/xgallery1.png.pagespeed.ic.RiMoEHAQJU.webp );
             background-size: cover;
-
-
+            @include breakpoint(992px){
+                grid-template-columns: repeat(2, 1fr);    
+                grid-column: 1/1;
+                  
+              }
+              @include breakpoint(552px){
+                grid-template-columns: repeat(1, 1fr);
+            //     grid-column-start: auto;
+            //     grid-column-end: auto;
+            // grid-row-start: auto;
+            grid-row-end: auto;
+                        
+              }
         }
 
         .box2 {
+          
             grid-row-start: 1;
             grid-row-end: 3;
             background-image: url(https://preview.colorlib.com/theme/timezone/assets/img/gallery/xgallery2.png.pagespeed.ic.R67GzIjQgh.webp);
             background-size: cover;
+            @include breakpoint(552px){
+                grid-template-columns: repeat(1, 1fr);
+                grid-row-start: auto;
+                grid-row-end: auto;
+                
+                // height: 500px;
+                
+              }
         }
 
         .box3 {
             background-image: url(https://preview.colorlib.com/theme/timezone/assets/img/gallery/xgallery3.png.pagespeed.ic.38W7JPYvku.webp);
             background-size: cover;
+           
         }
 
         .box4 {

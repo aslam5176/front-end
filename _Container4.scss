@@ -1,3 +1,4 @@
+@import "./mixins";
 %Container4 {
     .Container4 {
         display: flex;
@@ -7,7 +8,8 @@
         box-sizing: border-box;
         background-color: rgb(255, 255, 255);
         // overflow: hidden;
-        height: 1700px;
+        // height: 1700px;
+        height: auto;
 
 
         // margin: auto;
@@ -15,6 +17,7 @@
             display: flex;
             flex-direction: column;
             max-width: 1800px;
+            overflow: hidden;
 
             >.title h2 {
                 display: flex;
@@ -35,16 +38,19 @@
             }
 
             .grid {
-                // display: flex;
-                // flex-direction: row;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 25px;
-
+                overflow: hidden;
+                @include breakpoint(1000px){
+                    grid-template-columns: repeat(2, 1fr);          
+                  }
+                  @include breakpoint(552px){
+                    grid-template-columns: repeat(1, 1fr);          
+                  }
+          
+               
                 >.card {
-                    // height: 550px;
-                    // width: 361px;
-                    // background-color: rgb(67, 0, 250);
                     display: block;
                     text-align: center;
                     margin-top: 0%;
@@ -59,16 +65,13 @@
                             bottom: 0%;
                                
                         }
-                        // >img{
-                        //     // position: absolute;
-                        // }
                         >.hover{
                             position: absolute;
                             height: 60px;
                             width: 100%;
                             background-color: rgb(238, 0, 0);
                             bottom: -15.5% ;
-                            transition: all 1s;  
+                            transition: all 0.5s;  
                             color: white;
                             display: flex;
                             justify-content: center;
@@ -88,6 +91,7 @@
         }
     }
     .sathish{
+        flex-wrap: wrap;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -114,7 +118,7 @@
                     width: 100%;
                     background-color: rgb(238, 0, 0);
                     bottom: -15.5% ;
-                    transition: all 1s;  
+                    transition: all 0.5s;  
                     color: white;
                     display: flex;
                     justify-content: center;
