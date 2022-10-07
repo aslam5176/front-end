@@ -234,16 +234,19 @@ body > .container3 {
   grid-template-rows: repeat(3, 250px);
   gap: 20px;
   height: auto;
+  height: 600px;
 }
 @media (max-width: 992px) {
   body > .container3 {
     grid-template-columns: repeat(2, 1fr);
+    height: auto;
   }
 }
 @media (max-width: 552px) {
   body > .container3 {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 250px);
+    height: auto;
   }
 }
 body > .container3 .box {
@@ -773,6 +776,11 @@ body .Container9 img {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 760px) {
+  .footer1 {
+    grid-template-columns: repeat(1fr);
+  }
+}
 .footer1 > p {
   margin-left: 60px;
   color: rgb(143, 140, 140);
@@ -785,6 +793,11 @@ body .Container9 img {
   color: rgb(14, 12, 12);
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 760px) {
+  .footer1 > i {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .footer1 > i:hover {
   color: red;

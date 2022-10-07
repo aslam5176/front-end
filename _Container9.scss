@@ -72,6 +72,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include breakpoint(760px) {
+        grid-template-columns: repeat(1fr);
+    }
+
 
 
 
@@ -93,6 +97,9 @@
         display: flex;
 
         justify-content: flex-end;
+        @include breakpoint(760px) {
+            grid-template-columns: repeat(4,1fr);
+        }
 
 
         &:hover {
